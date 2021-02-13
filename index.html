@@ -10,22 +10,11 @@
 </head>
 <body>
   <h1> 회원가입 </h1>
-    <form action= "#" method="post" />
-      <label for = "user-name">이름 </label>
-        <input type="text" placeholder="이름" id="user-name"required/>
-      <label for = "user-id">아이디 </label>
-        <input type="text" placeholder="아이디" minlength="5" maxlength="10" id="user-id"required/>
-      <label for = "user-password">비밀번호 </label>
-        <input type="number" placeholder="비밀번호"minlength="6" maxlength="12" id="user-password"required/>
-      <label for = "user-email">이메일 </label>
-        <input type="email" placeholder="이메일" id="user-email" required/>
-      <label for = "user-tel">전화번호 </label>
-        <input type="number" placeholder="전화번호(01*-****-****)" id="user-tel" required/>
-      <label for = "user-age">만 나이 </label>
-        <input type="number" placeholder="만 나이" min="12" max="122" id="user-age"required/>
-      <label for = "user-file">파일 </label>
-        <input type="file" accept=".png, .jpg" id="user-file" required/>
-    <button> submit </button>
-
+    <form action= "#" method="GET" />
+      <label for = "yes">구독</label>
+        <input type="radio" id="yes" name="subscribe" value="yes"></input>
+      <label for = "no">미구독</label>
+        <input type="radio" id="no" name="subscribe" value="no"></input/>
+      <button type="submit"> submit </button>
 </body>
 </html>
