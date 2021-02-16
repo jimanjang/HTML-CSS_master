@@ -4,21 +4,19 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>Form - Input</title>
+  <title>장지만의 html과 css</title>
   <link rel="stylesheet" href="https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="./styles.css">
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <audio controls>
-    <source src="./asserts/audios/kimbug.mp3" type="audio/mpeg" />
-    <source src="./asserts/audios/kimbug.wav" type="audio/mp3" />
-    <source src="./asserts/audios/kimbug.ogg" type="audio/ogg" />
-  </audio>
-  <video width="560" height="315" controls>
-    <source src="./asserts/videos/kimbug.mp4" type="video/mp4">
-    <source src="./asserts/videos/kimbug.mov" type="video/mp4">
-  </video> 
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/_KKNjFI2yvc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <p>지원하지 않을 경우 브라우저를 업데이트 해주세요!</p>
+  <h1 style="font-family: 'Spoqa Han Sans Neo', 'sans-serif';">jimanjang</h1>
+  <script type="./app.js"></script>
+  <script>
+    var h1 = document.querySelector('h1');
+    h1.addEventListener('click', function(event){
+      this.textContent = 'hi';
+    })
+  </script>
 </body>
 </html>
