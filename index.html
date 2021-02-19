@@ -1,51 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Breadcrumb &amp; Pagination - 장지만의 버그 없는 HTML</title>
+    <title>Product Card - 김버그의 버그 없는 HTML</title>
     <link rel="stylesheet" href="./styles.css" />
+    <script src="https://kit.fontawesome.com/b9d1456fd5.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
-    <div class="breadcrumb">
-      <a href="https://github.com/jimanjang">jimanjang</a>
-      <a href="https://github.com/jimanjang/HTML-CSS_master">HTML-CSS_Master</a>
-    </div>
+    <div class="product-card">
+      <div class="product-card-image">
+        <img
+          src="https://user-images.githubusercontent.com/19285811/69318246-becd7980-0c77-11ea-8324-6c43e2de8cf2.png"
+          alt=""
+        />
+      </div>
 
-    <div class="pagination">
-      <a href="#" class="disabled" aria-label="Go to previous page">Previous</a>
-      <ol>
-        <li class="current-page">
-          <a href="#" aria-label="Current page. Page 1">1</a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to 2 page">2</a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to 3 page">3</a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to 4 page">4</a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to 5 page">5</a>
-        </li>
-        <li>
-          <button type="button" disabled>...</button>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to 6 page">6</a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to 7 page">7</a>
-        </li>
-        <li>
-          <a href="#" aria-label="Go to 8 page">8</a>
-        </li>
-      </ol>
-      <a href="#" aria-label="Go to next page">Next</a>
+      <div class="product-card-title">
+        <h1>
+          혼자가 혼자에게
+        </h1>
+        <strong aria-label="오늘의 책 선정">
+          오늘의 책
+        </strong>
+      </div>
+
+      <strong class="product-card-author" aria-label="저자 이병률">
+        이병률
+      </strong>
+
+      <div class="product-card-review">
+        <strong aria-label="평점 9.4">
+          <span aria-hidden="true">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half"></i>
+          </span>
+          9.4
+        </strong>
+      </div>
     </div>
   </body>
 </html>
