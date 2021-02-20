@@ -1,14 +1,14 @@
-var heading = document.querySelector("h1")
-var audio = new Audio("./assets/audios/pop.wav")
+var dropdownMenu = document.querySelector(".dropdown-menu")
+var dropdownButton = document.querySelector(".dropdown-button")
 
-heading.addEventListener("click", function(event) {
-  audio.play()
+dropdownButton.addEventListener("click", function(event) {
   if (this.active) {
-    this.style.color = "#000"
+    dropdownMenu.classList.remove("active")
   } else {
-    this.style.color = "#fff"
+    dropdownMenu.classList.add("active")
   }
+
   this.active = !this.active
 })
 
-heading.active = true
+dropdownButton.active = false
