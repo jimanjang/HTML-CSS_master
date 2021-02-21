@@ -1,38 +1,22 @@
-var followButton = document.querySelector(".feed-user-profile button")
-var likeButton = document.querySelector(".feed-footer button:first-child")
-var commentButton = document.querySelector(".feed-footer button:last-child")
-var feedComment = document.querySelector(".feed-comment")
+var inboxCheckboxes = document.querySelectorAll(".inbox-checkbox")
+var inboxStars = document.querySelectorAll(".inbox-star")
 
-followButton.addEventListener("click", function() {
-  if (this.following) {
-    this.innerHTML = "Follow"
-    this.classList.remove("following")
-  } else {
-    this.innerHTML = "Following"
-    this.classList.add("following")
-  }
-  this.following = !this.following
+inboxCheckboxes.forEach(function(item) {
+  item.addEventListener("click", toggle)
+  item.active = false
 })
-followButton.following = false
 
-likeButton.addEventListener("click", function() {
-  if (this.following) {
-    this.innerHTML = "10 Likes"
+inboxStars.forEach(function(item) {
+  item.addEventListener("click", toggle)
+  item.active = false
+})
+
+function toggle() {
+  if (this.active) {
     this.classList.remove("active")
   } else {
-    this.innerHTML = "11 Likes"
     this.classList.add("active")
   }
-  this.following = !this.following
-})
-likeButton.following = false
 
-commentButton.addEventListener("click", function() {
-  if (this.active) {
-    feedComment.classList.remove("active")
-  } else {
-    feedComment.classList.add("active")
-  }
   this.active = !this.active
-})
-commentButton.active = false
+}
