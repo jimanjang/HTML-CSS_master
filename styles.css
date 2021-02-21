@@ -1,12 +1,11 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,600&display=swap");
-
 * {
   margin: 0;
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Nunito Sans", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
   font-size: 16px;
   line-height: 1.5;
   color: #1f2d3d;
@@ -32,69 +31,171 @@ body::after {
   font-weight: 600;
 }
 
-.subscription {
+.feed {
+  width: 100%;
+  max-width: 420px;
+  background-color: #fff;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.04);
+  padding: 16px 20px;
+  border-radius: 5px;
+}
+
+.feed button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: #0257c7;
+  cursor: pointer;
+}
+
+.feed button:hover,
+.feed button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.feed-user-profile {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.feed-user-profile > a {
+  margin-right: 12px;
+  line-height: 1;
+}
+
+.feed-user-profile > a img {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+}
+
+.feed-user-profile div {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  align-items: center;
-  padding: 32px 56px;
-  border-radius: 6px;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.025);
 }
 
-.subscription h1 {
-  margin-bottom: 8px;
-  font-size: 24px;
-  line-height: 1.6666666667;
-  font-weight: 600;
+.feed-user-profile h1 {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
   color: #212529;
 }
 
-.subscription p {
-  color: #333e47;
+.feed-user-profile a {
+  color: inherit;
+  text-decoration: none;
 }
 
-.input-group {
-  display: flex;
+.feed-user-profile a:hover {
+  opacity: 0.5;
+}
+
+.feed-user-profile span {
+  color: #80868e;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.feed-user-profile button {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  height: 32px;
+  padding: 0 16px;
+  border: 1px solid #dbdee4;
+  border-radius: 4px;
+  transform: translateY(-50%);
+  transition: color 300ms, background-color 400ms, border-color 300ms;
 }
 
-.input-group input {
-  width: 240px;
-  height: 36px;
-  padding: 0 12px;
-  border: none;
-  border-radius: 4px;
-  margin-right: 4px;
-  font-size: 14px;
-  font-family: "Nunito Sans", sans-serif;
-  background-color: #f6f8fa;
+.feed-user-profile button.following {
+  background-color: #006ffe;
+  border-color: #006ffe;
+  color: #fff;
+}
+
+.feed-content {
+  margin-bottom: 8px;
+}
+
+.feed-content p {
+  font-size: 16px;
+  line-height: 1.375;
+  letter-spacing: -0.01em;
   color: #333e47;
 }
 
-.input-group input:focus,
-.input-group button:focus {
-  box-shadow: none;
-  outline: none;
+.feed-footer button {
+  height: 32px;
+  padding: 0;
+  border: none;
+  margin-right: 12px;
+  color: #0081ff;
+  background-color: #fff;
 }
 
-.input-group input::placeholder {
+.feed-footer button:hover {
+  color: #006ffe;
+}
+
+.feed-footer button:first-child.active {
+  font-weight: 700;
+}
+
+.feed-comment {
+  display: none;
+  margin-top: 4px;
+}
+
+.feed-comment.active {
+  display: block;
+}
+
+.feed-comment textarea {
+  width: 100%;
+  height: 64px;
+  padding: 10px 12px;
+  border: 1px solid #dbdee4;
+  border-radius: 3px;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 1.4285714286;
+  color: #333e47;
+  transition: border-color 250ms ease-in-out;
+}
+
+.feed-comment textarea:focus {
+  outline: none;
+  border-color: #b6bec8;
+}
+
+.feed-comment textarea::placeholder {
   color: #b6bec8;
 }
 
-.input-group button {
-  height: 36px;
-  padding: 0 12px;
-  border: none;
+.feed-comment button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 32px;
+  padding: 0 16px;
   border-radius: 4px;
-  font-size: 14px;
-  font-family: "Nunito Sans", sans-serif;
-  font-weight: 600;
+  transition: background-color 100ms;
+  background-color: #0081ff;
+  border-color: #0081ff;
   color: #fff;
-  background-color: #ff4438;
+}
+
+.feed-comment button:hover {
+  background-color: #006ffe;
 }

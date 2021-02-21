@@ -4,20 +4,51 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Input Group - 장지만의 버그 없는 HTML</title>
+    <title>Feed - 장지만의 버그 없는 HTML</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
+
   <body>
-    <div class="subscription">
-      <h1>Manage Subscriptions</h1>
-      <p>
-        You can follow the discussion on @kimbug without to leave a comment. Cool, huh?<br />
-        Just enter your email address in the form here below and you are all set
-      </p>
-      <form action="#" method="GET" class="input-group">
-        <input type="email" placeholder="Your Email" />
-        <button type="submit">Subscribe</button>
-      </form>
+    <div class="feed">
+      <div class="feed-user-profile">
+        <a href="#" target="_blank">
+          <img
+            src="https://user-images.githubusercontent.com/19285811/69063907-43da4800-0a58-11ea-8efb-4b57dca4e3fe.png"
+            alt="장지만"
+          />
+        </a>
+        <div>
+          <h1>
+            <a href="#" target="_blank">
+              jiman
+            </a>
+          </h1>
+          <span aria-label="30 minutes ago">30 min</span>
+        </div>
+        <button type="button">
+          Follow
+        </button>
+      </div>
+      <div class="feed-content">
+        <p>
+          The most beautiful experience we can have is the mysterious. It is the fundamental emotion that stands at the
+          cradle of true art and true science. — Albert Einstein
+        </p>
+      </div>
+      <div class="feed-footer">
+        <button type="button">
+          10 Likes
+        </button>
+        <button type="button">
+          0 Comments
+        </button>
+      </div>
+      <div class="feed-comment">
+        <textarea name="feed_comment" placeholder="Write a comment"></textarea>
+        <button type="submit">Submit</button>
+      </div>
     </div>
+
+    <script src="./app.js"></script>
   </body>
 </html>
