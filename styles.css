@@ -19,16 +19,23 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
-  background-color: #ee5253;
+  background-color: #f8f9fa;
 }
 
 body::after {
   content: "kimbug©";
   display: block;
   margin-top: 50px;
-  color: #fff;
+  color: #1f2d3d;
   font-size: 12px;
   font-weight: 600;
+}
+
+ul,
+li {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
 }
 
 .sr-only {
@@ -42,131 +49,70 @@ body::after {
   visibility: hidden;
 }
 
-.inbox {
-  max-width: 1140px;
-  border-collapse: collapse;
+.music-player {
+  width: 100%;
+  max-width: 540px;
+  padding: 20px;
   border-radius: 4px;
   background-color: #fff;
-  font-size: 13.5px;
-  color: #212529;
-  white-space: nowrap;
+  box-shadow: 0 3px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-.inbox thead {
-  position: absolute;
-  z-index: -1;
-}
-
-.inbox tr {
-  transition: box-shadow 150ms ease-in-out;
-}
-
-.inbox tr:not(:last-child) {
-  box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-.inbox tr:hover {
-  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.14);
-}
-
-.inbox tr.unread {
-  font-weight: 700;
-}
-
-.inbox tr.unread span {
-  font-weight: 400 !important;
-}
-
-.inbox span:not(:nth-child(2)) {
-  opacity: 0.75;
-}
-
-.inbox th,
-.inbox td {
-  padding: 8px 16px;
-}
-
-.inbox th:nth-child(3),
-.inbox td:nth-child(3) {
-  padding-right: 64px;
-}
-
-.inbox th:last-child,
-.inbox td:last-child {
-  font-size: 12px;
-}
-
-.inbox a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.inbox-actions {
+.music-play-item {
+  position: relative;
   display: flex;
   align-items: center;
-}
-
-.inbox-actions > * {
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  margin: 0 2px;
-}
-
-.inbox-star,
-.inbox-checkbox::after {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border: none;
-  background-color: transparent;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  transition: opacity 100ms;
-}
-
-.inbox-star:hover,
-.inbox-checkbox:hover::after {
-  opacity: 0.75;
-}
-
-.inbox-star:focus,
-.inbox-checkbox:focus {
-  outline: none;
-  box-shadow: none;
-}
-
-.inbox-star {
-  background-image: url(./assets/icon-star-border.svg);
-}
-
-.inbox-star.active {
-  background-image: url(./assets/icon-star.svg);
-}
-
-.inbox-checkbox::after {
-  content: "";
-  background-size: 90% auto;
-  background-image: url(./assets/icon-checkbox-outlined.svg);
-}
-
-.inbox-checkbox.active::after {
-  background-image: url(./assets/icon-checkbox-checked.svg);
-}
-
-.inbox-checkbox {
-  position: relative;
-  top: 1px;
-  overflow: hidden;
-}
-
-.inbox-checkbox input {
-  position: absolute;
-  top: 0;
-  left: 0;
+  align-content: center;
   width: 100%;
-  height: 100%;
-  opacity: 0;
+}
+
+.music-album-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  margin-right: 16px;
+}
+
+.music-info {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
+  padding: 8px 0;
+  border-top: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.music-info * {
+  transition: opacity 120ms;
+}
+
+.music-info:hover * {
+  opacity: 0.6;
+}
+
+.music-play-item:last-child .music-info {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.music-info-detail * {
+  font-weight: 400;
+}
+
+.music-info-detail h1 {
+  font-size: 16px;
+  line-height: 1.2;
+  color: #383838;
+}
+
+.music-info-detail strong {
+  display: block;
+  font-size: 14px;
+  color: #8e8e93;
+}
+
+.music-playtime {
+  font-size: 14px;
+  color: #909095;
 }
